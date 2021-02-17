@@ -30,9 +30,10 @@ var GlEment = {
     }
   }
   ,ambientlight:{
-    create({color}={}){
-      var ambient_light = new THREE.AmbientLight(new THREE.Color(color));
+    create({color,intensity}={}){
+      var ambient_light = new THREE.AmbientLight(new THREE.Color(color), intensity);
       //debugger;
+
       return ambient_light;
     }
   }
